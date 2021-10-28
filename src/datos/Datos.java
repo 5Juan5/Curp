@@ -13,7 +13,7 @@ public class Datos {
         Object[] entidad= {"---","Ciudad de México","Aguascalientes","Baja California","Baja California","Baja California Sur","Campeche"
                 ,"Chiapas","Chihuahua","Coahuila","Coahuaila de Zaragoza","Colima","Durango","Guanajuato","Guerrero","Hidalgo","Jalisco"
                 ,"México","Michoacán de Ocampo","Morelos","Nayarit","Nuevo León","Oaxaca","Puebla","Querétaro","Quintana Roo","San Luis Potosí"
-                ,"Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz de Ignacio de la Llave","Yucatán","Zacatecas"};
+                ,"Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatán","Zacatecas"};
         String nombre,nombre2 , apeP, apeM, year, curp = "";
         nombre =  JOptionPane.showInputDialog(null,"Nombre:","Digite nombre",-1);
         nombre2 =  JOptionPane.showInputDialog(null,"NOTA: en caso de no tener dar 'enter' o 'aceptar'.","Digite segundo nombre: ",-1);
