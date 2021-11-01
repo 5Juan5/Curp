@@ -2,6 +2,9 @@
 package dominio;
 
 import java.util.Random;
+import  dominio.Estado.*;
+import static dominio.Estado.*;
+import javax.swing.JOptionPane;
 
 public class Dominio {
     private String nombre;
@@ -166,8 +169,110 @@ public Dominio(String nombre,String nombre2, String apellidoP, String apellidom,
             nuevaLetra = primerLetra(sexo);
             return nuevaLetra.toUpperCase();
         }
-    public String entidad(){
-    String nuevaLetra = "";
+    public String entidad(Estado estado){
+        String nuevaLetra = "";
+        switch(estado){
+            case Zacatecas:
+                nuevaLetra = Zacatecas.getEstado();
+                break;
+            case Yucatán :
+                nuevaLetra = Yucatán.getEstado();
+                break;
+            case Veracruz:
+                nuevaLetra = Veracruz.getEstado();
+                break;
+            case Tamaulipas:
+                nuevaLetra = Tamaulipas.getEstado();
+                break;
+            case Tlaxcala:
+                nuevaLetra = Tlaxcala.getEstado();
+                break;
+            case Tabasco:
+                nuevaLetra =  Tabasco.getEstado();
+                break;
+            case Sonora:
+                nuevaLetra = Sonora.getEstado();
+                break;
+            case SanLuisPotosi:
+                nuevaLetra = SanLuisPotosi.getEstado();
+                break;
+            case Sinaloa:
+                nuevaLetra = Sinaloa.getEstado();
+                break;
+            case Querétaro:
+                nuevaLetra = Querétaro.getEstado();
+                break;
+            case QuintanaRoo:
+                nuevaLetra = QuintanaRoo.getEstado();
+                break;
+            case Puebla:
+                nuevaLetra = Puebla.getEstado();
+                break;
+            case Oaxaca:
+                nuevaLetra = Oaxaca.getEstado();
+                break;
+            case Nayarit:
+                nuevaLetra = Nayarit.getEstado();
+                break;
+            case NuevoLeon:
+                nuevaLetra = NuevoLeon.getEstado();
+                break;
+            case Morelos:
+                nuevaLetra = Morelos.getEstado();
+                break;
+            case MichoacanDeOcampo:
+                nuevaLetra = MichoacanDeOcampo.getEstado();
+                break;
+            case Mexico:
+                nuevaLetra = Mexico.getEstado();
+                break;
+            case Jalisco:
+                nuevaLetra = Jalisco.getEstado();
+                break;
+            case Hidalgo:
+                nuevaLetra = Hidalgo.getEstado();
+                break;
+            case Guanajuato:
+                nuevaLetra = Guanajuato.getEstado();
+                break;
+            case Gurrero:
+                nuevaLetra = Gurrero.getEstado();
+                break;
+            case Durango:
+                nuevaLetra = Durango.getEstado();
+                break;
+            case CiudadDeMexico:
+                nuevaLetra = CiudadDeMexico.getEstado();
+                break;
+            case Chiapas:
+                nuevaLetra = Chiapas.getEstado();
+                break;
+            case Colima:
+                nuevaLetra = Colima.getEstado();
+                break;
+            case CoahuilaDeZaragoza:
+                nuevaLetra = CoahuilaDeZaragoza.getEstado();
+                break;
+            case Chihuahua:
+                nuevaLetra = Chihuahua.getEstado();
+                break;
+            case Campeche:
+                nuevaLetra = Campeche.getEstado();
+                break;
+            case BajaCaliforniaSur:
+                nuevaLetra = BajaCaliforniaSur.getEstado();
+                break;
+            case BajaCalifornia:
+                nuevaLetra = BajaCalifornia.getEstado();
+                break;
+            case Aguacalientes:
+                nuevaLetra = Aguacalientes.getEstado();
+                break;
+            default:
+                JOptionPane.showConfirmDialog(null, "El estado ya no extiste","No existe",JOptionPane.ERROR);
+                        }
+        
+    
     if(lugarNacimiento.equals("Zacatecas")){
         nuevaLetra = "ZS";
     }else if(lugarNacimiento.equals("Yucatán")){

@@ -18,12 +18,29 @@ public enum Estado {
     NuevoLeon("NL"),
     Morelos("MS"),
     MichoacanDeOcampo("MN"),
-    Mexico("MC");
-    
+    Mexico("MC"),
+    Jalisco("JC"),
+    Hidalgo("HG"),
+    Guanajuato("GT"),
+    Gurrero("GR"),
+    Durango("DG"),
+    CiudadDeMexico("DF"),
+    Chiapas("CS"),
+    Colima("CM"),
+    CoahuilaDeZaragoza("CL"),
+    Chihuahua("CH"),
+    Campeche("CC"),
+    BajaCaliforniaSur("BS"),
+    BajaCalifornia("BC"),
+    Aguacalientes("AS");
     
      private final String  nuevaLetra;
     
      Estado(String letra){
          this.nuevaLetra =  letra;
+     }
+     
+     public String getEstado(){
+         return this.nuevaLetra;
      }
 }

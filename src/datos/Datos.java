@@ -1,8 +1,7 @@
-
 package datos;
-
 import javax.swing.JOptionPane;
 import dominio.Dominio;
+import dominio.Estado;
 
 public class Datos {
     public static void main(String[] args) {
@@ -26,12 +25,12 @@ public class Datos {
         Object lugar = JOptionPane.showInputDialog(null,"ENTIDAD FEDERATIVA","Ciudad o estado de nacimiento",JOptionPane.QUESTION_MESSAGE,null,entidad,entidad[0]);
         Dominio d = new Dominio(nombre, nombre2 , apeP, apeM, year.toUpperCase(), (String) mes, (String) dia, (String) lugar, (String) sexo);
         if(nombre2.equals("")){
-            curp = d.primerLetra(apeP)+d.primerVocal()+d.primerLetra(apeM)+d.nombrePila(nombre, nombre2)+d.yearDayMonth(dia, mes, year)+d.sexo()+d.entidad()+d.primer_Constante()+d.primer_ConstantSegundoApllido()+d.ConstanteNombrePlia()+d.ultimosDigitos()+d.codigoVerificador();
+            curp = d.primerLetra(apeP)+d.primerVocal()+d.primerLetra(apeM)+d.nombrePila(nombre, nombre2)+d.yearDayMonth(dia, mes, year)+d.sexo()+d.entidad((Estado) lugar)+d.primer_Constante()+d.primer_ConstantSegundoApllido()+d.ConstanteNombrePlia()+d.ultimosDigitos()+d.codigoVerificador();
             JOptionPane.showMessageDialog(null, "CURP: "+curp+"\nDATOS\nNombre: "+d.getNombre()+"\nApellido Paterno: "
                 +d.getApellidoP()+"\nApellido materno: "+d.getApellidom()+"\nDia de nacimiento: "+d.getDiaNacimiento()+"\nMes de nacimiento: "+d.getMesNacimiento()
             +"\nAño de nacimiento: "+d.getYearNacimidento());
         }else{
-            curp = d.primerLetra(apeP)+d.primerVocal()+d.primerLetra(apeM)+d.nombrePila(nombre, nombre2)+d.yearDayMonth(dia, mes, year)+d.sexo()+d.entidad()+d.primer_Constante()+d.primer_ConstantSegundoApllido()+d.ConstanteNombrePlia()+d.ultimosDigitos()+d.codigoVerificador();
+            curp = d.primerLetra(apeP)+d.primerVocal()+d.primerLetra(apeM)+d.nombrePila(nombre, nombre2)+d.yearDayMonth(dia, mes, year)+d.sexo()+d.entidad((Estado) lugar)+d.primer_Constante()+d.primer_ConstantSegundoApllido()+d.ConstanteNombrePlia()+d.ultimosDigitos()+d.codigoVerificador();
             JOptionPane.showMessageDialog(null, "CURP: "+curp+"\nDATOS\nNombre: "+d.getNombre()+"\nSegundo nombre: "+d.getNombre2()+"\nApellido Paterno: "
                 +d.getApellidoP()+"\nApellido materno: "+d.getApellidom()+"\nDia de nacimiento: "+d.getDiaNacimiento()+"\nMes de nacimiento: "+d.getMesNacimiento()
             +"\nAño de nacimiento: "+d.getYearNacimidento());
