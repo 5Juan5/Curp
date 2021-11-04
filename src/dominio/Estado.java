@@ -8,7 +8,7 @@ public enum Estado {
     Tlaxcala("TL"),
     Tabasco("TC"),
     Sonora("SR"),
-    SanLuisPotosi("SP"),
+    SanLuisPotosí("SP"),
     Sinaloa("SL"),
     Querétaro("QT"),
     QuintanaRoo("QR"),
@@ -18,7 +18,7 @@ public enum Estado {
     NuevoLeon("NL"),
     Morelos("MS"),
     MichoacanDeOcampo("MN"),
-    Mexico("MC"),
+    México("MC"),
     Jalisco("JC"),
     Hidalgo("HG"),
     Guanajuato("GT"),
@@ -32,7 +32,19 @@ public enum Estado {
     Campeche("CC"),
     BajaCaliforniaSur("BS"),
     BajaCalifornia("BC"),
-    Aguacalientes("AS");
+    Aguacalientes("AS"),
+    Enero("01"),
+    Febrero("02"),
+    Marzo("03"),
+    Abril("04"),
+    Mayo("05"),
+    Junio("06"),
+    Julio("07"),
+    Agosto("08"),
+    Septiembre("09"),
+    Octubre("10"),
+    Noviembre("11"),
+    Diciembre("12");
     
      private final String  nuevaLetra;
     

@@ -16,9 +16,20 @@ public class Dominio {
     private String diaNacimiento;
     private String lugarNacimiento;
     private String sexo;
+    
 public Dominio(String nombre,String nombre2, String apellidoP, String apellidom, String yearNacimidento, String mesNacimiento, String diaNacimiento, String lugarNacimiento, String sexo) {
         this.nombre = nombre;
         this.nombre2 = nombre2;
+        this.apellidoP = apellidoP;
+        this.apellidom = apellidom;
+        this.yearNacimidento = yearNacimidento;
+        this.mesNacimiento = mesNacimiento;
+        this.diaNacimiento = diaNacimiento;
+        this.lugarNacimiento = lugarNacimiento;
+        this.sexo = sexo;
+    }
+public Dominio(String nombre, String apellidoP, String apellidom, String yearNacimidento, String mesNacimiento, String diaNacimiento, String lugarNacimiento, String sexo) {
+        this.nombre = nombre;
         this.apellidoP = apellidoP;
         this.apellidom = apellidom;
         this.yearNacimidento = yearNacimidento;
@@ -134,34 +145,51 @@ public Dominio(String nombre,String nombre2, String apellidoP, String apellidom,
         String nuevaLetra = "";
         return nuevaLetra.toUpperCase();
     }
-    public String yearDayMonth(Object dia, Object mes, String year){
+    public String yearDayMonth(Estado mes, Object dia, String year){
         String nuevaLetra = "";
-    if(mes.equals("Enero")){
-        mes = "01";
-    }else if(mes.equals("Febrero")){
-        mes = "02";
-    }else if(dia == "Marzo"){
-        mes = "03";
-    }else if(mes == "Abril"){
-        mes = "04";
-    }else if(mes == "Mayo"){
-        mes = "05";
-    }else if(mes == "Junio"){
-        mes = "06";
-    }else if(mes.equals("Julio")){
-        mes = "07";
-    }else if(mes == "Agosto"){
-        mes = "08";
-    }else if(mes == "Septiembre"){
-        mes = "09";
-    }else if(mes == "Octubre"){
-        mes = "10";
-    }else if(mes == "Noviembre"){
-        mes = "11";
-    }else if(mes == "Diciembre"){
-        mes = "12";
-    }
-        nuevaLetra = year.substring(2,4)+mes+dia;//2000     0
+        String res = null;
+  switch(mes){
+      case Enero:
+          res = Enero.getEstado();
+          break;
+      case Febrero:
+          res = Febrero.getEstado();
+          break;
+      case Marzo:
+          res = Marzo.getEstado();
+          break;
+      case Abril:
+          res = Abril.getEstado();
+          break;
+      case Mayo:
+          res = Mayo.getEstado();
+          break;
+      case Junio:
+          res = Junio.getEstado();
+          break;
+      case Julio:
+          res = Julio.getEstado();
+          break;
+      case Agosto:
+          res = Agosto.getEstado();
+          break;
+      case Septiembre:
+          res = Septiembre.getEstado();
+          break;
+      case Octubre:
+          res = Octubre.getEstado();
+          break;
+      case Noviembre:
+          res = Noviembre.getEstado();
+          break;
+      case Diciembre:
+          res = Diciembre.getEstado();
+          break;
+          default:
+                JOptionPane.showMessageDialog(null, "MES", "No es un mes",  -1);
+          
+  }
+        nuevaLetra = year.substring(2,4)+res+dia;//2000     0
         return nuevaLetra;
     }
     public String sexo(){
@@ -169,6 +197,7 @@ public Dominio(String nombre,String nombre2, String apellidoP, String apellidom,
             nuevaLetra = primerLetra(sexo);
             return nuevaLetra.toUpperCase();
         }
+    //Aqui mande a llamar a la clade Enum, para los estados ya que estos los tenemos ya 
     public String entidad(Estado estado){
         String nuevaLetra = "";
         switch(estado){
@@ -193,8 +222,8 @@ public Dominio(String nombre,String nombre2, String apellidoP, String apellidom,
             case Sonora:
                 nuevaLetra = Sonora.getEstado();
                 break;
-            case SanLuisPotosi:
-                nuevaLetra = SanLuisPotosi.getEstado();
+            case SanLuisPotosí:
+                nuevaLetra = SanLuisPotosí.getEstado();
                 break;
             case Sinaloa:
                 nuevaLetra = Sinaloa.getEstado();
@@ -223,8 +252,8 @@ public Dominio(String nombre,String nombre2, String apellidoP, String apellidom,
             case MichoacanDeOcampo:
                 nuevaLetra = MichoacanDeOcampo.getEstado();
                 break;
-            case Mexico:
-                nuevaLetra = Mexico.getEstado();
+            case México:
+                nuevaLetra = México.getEstado();
                 break;
             case Jalisco:
                 nuevaLetra = Jalisco.getEstado();
@@ -270,74 +299,7 @@ public Dominio(String nombre,String nombre2, String apellidoP, String apellidom,
                 break;
             default:
                 JOptionPane.showConfirmDialog(null, "El estado ya no extiste","No existe",JOptionPane.ERROR);
-                        }
-        
-    
-    if(lugarNacimiento.equals("Zacatecas")){
-        nuevaLetra = "ZS";
-    }else if(lugarNacimiento.equals("Yucatán")){
-        nuevaLetra = "YN";
-    }else if(lugarNacimiento.equals("Veracruz de Ignacio de la Llave")){
-        nuevaLetra = "VZ";
-    }else if(lugarNacimiento.equals("Tamaulipas")){
-        nuevaLetra = "TS";
-    }else if(lugarNacimiento.equals("Tlaxcala")){
-        nuevaLetra = "TL";
-    }else if(lugarNacimiento.equals("Tabasco")){
-        nuevaLetra = "TC";
-    }else if(lugarNacimiento.equals("Sonora")){
-        nuevaLetra = " SR";
-    }else if(lugarNacimiento.equals("San Luis Potosí")){
-        nuevaLetra = "SP";
-    }else if(lugarNacimiento.equals("Sinaloa")){
-        nuevaLetra = "SL";
-    }else if(lugarNacimiento.equals("Querétaro")){
-        nuevaLetra = "QT";
-    }else if(lugarNacimiento.equals("Quintana Roo")){
-     nuevaLetra = "QR";   
-    }else if(lugarNacimiento.equals("Puebla")){
-        nuevaLetra = "PL";
-    }else if(lugarNacimiento.equals("Oaxaca")){
-        nuevaLetra = "OC";
-    }else if(lugarNacimiento.equals("Nayarit")){
-        nuevaLetra = "NT";
-    }else if(lugarNacimiento.equals("Nuevo León")){
-        nuevaLetra = "NL";
-    }else if(lugarNacimiento.equals("Morelos")){
-        nuevaLetra = "MS";
-    }else if(lugarNacimiento.equals("Michoacán de Ocampo")){
-        nuevaLetra = "MN";
-    }else if(lugarNacimiento.equals("México")){
-     nuevaLetra = "MC";   
-    }else if(lugarNacimiento.equals("Jalisco")){
-        nuevaLetra = "JC";
-    }else if(lugarNacimiento.equals("Hidalgo")){
-        nuevaLetra = "HG";
-    }else if(lugarNacimiento.equals("Guanajuato")){
-        nuevaLetra = "GT";
-    }else if(lugarNacimiento.equals("Guerrero")){
-        nuevaLetra = "GR";
-    }else if(lugarNacimiento.equals("Durango")){
-        nuevaLetra = "DG";
-    }else if(lugarNacimiento.equals("Ciudad de México")){
-        nuevaLetra = "DF";
-    }else if(lugarNacimiento.equals("Chiapas")){
-        nuevaLetra = "CS";
-    }else if(lugarNacimiento.equals("Colima")){
-        nuevaLetra = "CM";
-    }else if(lugarNacimiento.equals("Coahuila de Zaragoza")){
-        nuevaLetra = "CL";
-    }else if(lugarNacimiento.equals("Chihuahua")){
-        nuevaLetra = "CH";
-    }else if(lugarNacimiento.equals("Campeche")){
-        nuevaLetra = "CC";
-    }else if(lugarNacimiento.equals("Baja California Sur")){
-        nuevaLetra = "BS";
-    }else if(lugarNacimiento.equals("Baja California")){
-        nuevaLetra = "BC";
-    }else if(lugarNacimiento.equals("Aguascalientes")){
-        nuevaLetra = "AS";
-    }
+                        }    
     return nuevaLetra;
 }
     public String primer_Constante(){
