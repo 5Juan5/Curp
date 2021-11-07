@@ -92,7 +92,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel10.setText("Entidad federativa:");
 
-        EntidadFederativa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---", "Zacatecas", "Yucatán ", "Veracruz", "Tamaulipas", "Tlaxcala", "Tabasco", "Sonora", "SanLuisPotosi", "Sinaloa", "Querétaro", "QuintanaRoo", "Puebla", "Oaxaca", "Nayarit", "NuevoLeon", "Morelos", "MichoacanDeOcampo", "Mexico", "Jalisco", "Hidalgo", "Guanajuato", "Gurrero", "Durango", "CiudadDeMexico", "Chiapas", "Colima", "CoahuilaDeZaragoza", "Chihuahua", "Campeche", "BajaCaliforniaSur", "BajaCalifornia", "Aguacalientes" }));
+        EntidadFederativa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---", "Zacatecas", "Yucatán ", "Veracruz", "Tamaulipas", "Tlaxcala", "Tabasco", "Sonora", "SanLuisPotosí", "Sinaloa", "Querétaro", "QuintanaRoo", "Puebla", "Oaxaca", "Nayarit", "NuevoLeon", "Morelos", "MichoacanDeOcampo", "Mexico", "Jalisco", "Hidalgo", "Guanajuato", "Gurrero", "Durango", "CiudadDeMexico", "Chiapas", "Colima", "CoahuilaDeZaragoza", "Chihuahua", "Campeche", "BajaCaliforniaSur", "BajaCalifornia", "Aguacalientes" }));
 
         jButton1.setText("CURP");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
