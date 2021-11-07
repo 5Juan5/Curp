@@ -18,7 +18,7 @@ public enum Estado {
     NuevoLeon("NL"),
     Morelos("MS"),
     MichoacanDeOcampo("MN"),
-    México("MC"),
+    Mexico("MC"),
     Jalisco("JC"),
     Hidalgo("HG"),
     Guanajuato("GT"),

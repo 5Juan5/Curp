@@ -145,7 +145,7 @@ public Dominio(String nombre, String apellidoP, String apellidom, String yearNac
         String nuevaLetra = "";
         return nuevaLetra.toUpperCase();
     }
-    public String yearDayMonth(Estado mes, Object dia, String year){
+    public String yearDayMonth(Estado mes, String dia, String year){
         String nuevaLetra = "";
         String res = null;
   switch(mes){
@@ -252,8 +252,8 @@ public Dominio(String nombre, String apellidoP, String apellidom, String yearNac
             case MichoacanDeOcampo:
                 nuevaLetra = MichoacanDeOcampo.getEstado();
                 break;
-            case México:
-                nuevaLetra = México.getEstado();
+            case Mexico:
+                nuevaLetra = Mexico.getEstado();
                 break;
             case Jalisco:
                 nuevaLetra = Jalisco.getEstado();
